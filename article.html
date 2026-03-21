@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>新闻详情 - 每日热点</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            background: #f5f5f5;
+            min-height: 100vh;
+            color: #333;
+            line-height: 1.8;
+        }
+        
+        /* 顶部导航 */
+        .header {
+            background: #c41e3a;
+            padding: 12px 15px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .back-btn {
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 5px;
+        }
+        
+        .header-title {
+            font-size: 17px;
+            color: white;
+            font-weight: 500;
+        }
+        
+        /* 主内容 */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 15px;
+        }
+        
+        .article-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .article-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+        
+        .article-content {
+            padding: 20px;
+        }
+        
+        .article-category {
+            display: inline-block;
+            background: #c41e3a;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 13px;
+            margin-bottom: 12px;
+        }
+        
+        .article-title {
+            font-size: 22px;
+            font-weight: bold;
+            color: #222;
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
+        
+        .article-meta {
+            display: flex;
+            gap: 15px;
+            font-size: 13px;
+            color: #666;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 20px;
+        }
+        
+        .article-source {
+            color: #c41e3a;
+            font-weight: 500;
+        }
+        
+        /* 简报内容 */
+        .brief-section {
+            margin-bottom: 25px;
+        }
+        
+        .brief-label {
+            font-size: 14px;
+            color: #c41e3a;
+            font-weight: bold;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .brief-label::before {
+            content: '';
+            width: 4px;
+            height: 16px;
+            background: #c41e3a;
+            border-radius: 2px;
+        }
+        
+        .brief-content {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.9;
+            text-align: justify;
+        }
+        
+        .brief-content p {
+            margin-bottom: 15px;
+            text-indent: 2em;
+        }
+        
+        /* 原文链接区 */
+        .original-section {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 25px;
+            border: 1px dashed #ddd;
+        }
+        
+        .original-title {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 12px;
+        }
+        
+        .original-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #c41e3a;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        
+        .original-link:hover {
+            background: #a01830;
+        }
+        
+        /* 相关推荐 */
+        .related-section {
+            margin-top: 25px;
+        }
+        
+        .related-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #222;
+            margin-bottom: 15px;
+            padding-left: 12px;
+            border-left: 3px solid #c41e3a;
+        }
+        
+        .related-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .related-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .related-item:hover {
+            background: #f8f9fa;
+        }
+        
+        .related-item-title {
+            font-size: 15px;
+            color: #222;
+            line-height: 1.4;
+            margin-bottom: 6px;
+        }
+        
+        .related-item-source {
+            font-size: 12px;
+            color: #c41e3a;
+        }
+        
+        /* 加载状态 */
+        .loading {
+            text-align: center;
+            padding: 100px 20px;
+            color: #999;
+        }
+        
+        .error {
+            text-align: center;
+            padding: 100px 20px;
+            color: #c41e3a;
+        }
+        
+        /* 响应式 */
+        @media (max-width: 480px) {
+            .article-image {
+                height: 180px;
+            }
+            
+            .article-title {
+                font-size: 20px;
+            }
+            
+            .brief-content {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <span class="back-btn" onclick="history.back()">←</span>
+            <span class="header-title">新闻详情</span>
+        </div>
+    </header>
+    
+    <main class="container" id="articleContainer">
+        <div class="loading">正在加载文章...</div>
+    </main>
+    
+    <script>
+        // 获取URL参数
+        function getParam(name) {
+            const url = new URL(window.location.href);
+            return url.searchParams.get(name);
+        }
+        
+        // 查找文章
+        function findArticle(data, articleId) {
+            for (const cat of data.categories) {
+                const article = cat.articles.find(a => a.id === articleId);
+                if (article) {
+                    return {...article, category: cat};
+                }
+            }
+            return null;
+        }
+        
+        // 生成800字简报
+        function generateBrief(article) {
+            const briefs = {
+                'soc-001': `3月21日，国务院总理李强主持召开国务院常务会议，会议重点研究了两项重要议题。一是建立健全涉企收费长效监管机制，聚焦涉企收费主体强化全过程监管，构建协同高效长效机制，健全涉企收费目录清单制度，切实减轻企业负担，优化营商环境。二是审议通过《婚姻登记条例（修订草案）》，将近年来婚姻登记"跨省通办"等改革试点成果上升为法律制度，推进婚姻登记"全国通办"，加强婚姻家庭服务指导和辅导服务体系建设。
+
+此次修订《婚姻登记条例》是深化"放管服"改革、推进政务服务便民化的重要举措。近年来，随着人口流动日益频繁，群众对异地办理婚姻登记的需求不断增加。"跨省通办"试点自2021年6月启动以来，已覆盖21个省（区、市），截至2024年底，全国累计办理跨省婚姻登记超过35万对，有效解决了群众异地办理婚姻登记"多地跑""多次跑"的问题。
+
+会议强调，要坚持以人民为中心的发展思想，持续优化婚姻登记服务，加强婚姻家庭辅导，弘扬文明婚俗新风，促进家庭和谐稳定。同时，要严格落实涉企收费监管责任，坚决遏制乱收费、乱罚款、乱摊派行为，切实维护市场主体合法权益，为经济社会高质量发展营造良好环境。`,
+                
+                'soc-002': `2025年苏州花展（上方山百花节）于3月22日至5月12日在苏州上方山国家森林公园隆重举行。本届花展以"醉美花海 春到苏州"为主题，规模较去年全面升级，将为市民和游客呈现一场视觉盛宴。
+
+据悉，本届花展将展示20余万株郁金香，搭配1000余种新优花卉品种，打造30000平方米特色展区、4组精品花园展区，更有11000平方米绚丽花海。绣球花、樱花等花卉也将点缀展区，营造浓郁的春意氛围。花展期间还将举办春日花市集等丰富多彩的活动。
+
+苏州上方山国家森林公园拥有得天独厚的自然条件，是华东地区规模最大的花卉展览举办地之一。花展采用片植与混植相结合的种植方式，通过风车草坪展区、休闲岛展区、先锋设计展区、家庭园艺展区等多个主题区域，展现不同风格的园艺美学。其中，休闲岛展区依托园内最大的水系景观，创意打造垂直花海，营造具有莫奈花园风格的精品花境，实现水景与花境相互交融。
+
+本届花展不仅是一场赏花盛会，更是推动苏州文旅融合发展、展示城市形象的重要窗口。预计花展期间将吸引超过百万游客前来观赏，带动周边餐饮、住宿、交通等产业发展，为苏州春日经济注入新活力。`,
+                
+                'spo-001': `2025年全国春季游泳锦标赛于3月22日在青岛圆满落幕。山东队小将张展硕在男子200米个人混合泳决赛中发挥出色，以优异成绩夺冠，收获个人在本届赛事的第三枚金牌，并刷新该项目个人最好成绩，展现出强劲的竞技状态和巨大的发展潜力。
+
+张展硕出生于2007年，是中国游泳队新生代选手中的佼佼者。他主攻中长距离自由泳和混合泳项目，技术全面、体能充沛。在2024年巴黎奥运会上，张展硕就代表中国队参加了男子4×200米自由泳接力比赛。此次春季锦标赛，他在男子400米自由泳、男子800米自由泳和男子200米个人混合泳三个项目上全部夺冠，展现出极强的综合实力。
+
+本届春季游泳锦标赛是全国最高水平的游泳赛事之一，吸引了来自全国各地的顶尖选手参赛。浙江队何峻毅在男子100米自由泳中夺冠，福建队陈露颖和浙江队柳雅欣分别在女子200米蝶泳和1500米自由泳中摘金。赛事展现了年轻选手的崛起和老将的坚持，为即将到来的全国运动会和奥运会选拔赛增添了看点。
+
+中国游泳队总教练表示，通过本次赛事检验了冬训成果，发现了新人，也看到了不足。接下来将有针对性地进行备战训练，力争在2025年新加坡世锦赛和2028年洛杉矶奥运会上取得更好成绩。`,
+                
+                'spo-003': `2025年世界单板滑雪锦标赛男子坡面障碍技巧决赛于3月21日举行，首次参加世锦赛的中国选手苏翊鸣发挥出色，摘得银牌，创造了中国单板滑雪在世锦赛上的历史最好成绩。
+
+苏翊鸣出生于2004年，是中国单板滑雪领军人物。2022年北京冬奥会上，他在男子单板滑雪大跳台项目中夺得金牌，实现中国单板滑雪冬奥会金牌零的突破，并成为中国最年轻的冬奥会冠军。此后，他不断在国际赛场取得突破，2023年在世界极限运动会上完成1980动作获得铜牌，2024年更是完成了世界首个背靠背1980动作，并获得吉尼斯世界纪录认证。
+
+本次世锦赛，苏翊鸣在坡面障碍技巧项目中展现了极高的竞技水平。资格赛中，他以稳定的发挥顺利晋级。决赛中，面对来自美国、加拿大、挪威等滑雪强国的顶尖选手，苏翊鸣沉着应战，在道具区和跳台区都完成了高难度动作，最终获得银牌。这也是中国选手首次在世锦赛坡面障碍技巧项目上登上领奖台。
+
+苏翊鸣在赛后接受采访时表示，能够代表国家参加世锦赛并获得奖牌感到非常荣幸，这枚银牌是对自己多年努力的肯定，也看到了与顶尖选手之间的差距。接下来将继续刻苦训练，完善技术细节，争取在未来的比赛中取得更好成绩，为中国单板滑雪事业做出更大贡献。`,
+                
+                'ent-001': `国产动画电影《哪吒之魔童闹海》（简称《哪吒2》）密钥再次延期一个月，将上映至4月30日。截至目前，该片全球票房已突破152亿元人民币，位列全球影史票房榜第五位，成为首部进入全球票房前五的亚洲电影。
+
+《哪吒2》自2025年春节档上映以来，票房表现持续强劲。影片由饺子执导，是2019年爆款电影《哪吒之魔童降世》的续作，延续了前作对中国传统神话的现代演绎，讲述哪吒与敖丙在天劫之后重塑肉身、对抗命运的故事。影片制作精良，特效镜头超过1900个，剧情紧凑、情感真挚，深受观众喜爱。
+
+根据票房数据分析，影片观众呈现以下特点：女性观众占比56.89%，30岁以上观众占比显著，白领群体贡献最多票房达59.92%，四线城市观众票房贡献最高占比38.3%。这表明《哪吒2》成功拓宽了动画电影受众群体，95后、90后成为主要观影力量。
+
+《哪吒2》的成功不仅体现在票房上，更在于其对中国动画产业的推动作用。影片的成功证明了中国动画电影在商业性和艺术性上都能达到国际一流水准，为国产动画的发展树立了新标杆。目前，影片正在向全球票房前三发起冲击，有望创造更多历史。`,
+                
+                'sci-001': `3月21日，神舟十九号航天员乘组圆满完成第三次出舱活动。航天员蔡旭哲、宋令东、王浩泽密切协同，在空间站机械臂和地面科研人员的配合支持下，完成了空间站空间碎片防护装置安装、舱外设备设施巡检等既定任务。按计划，乘组将于1个多月后返回地球家园。
+
+神舟十九号载人飞船于2024年10月30日发射升空，乘组由蔡旭哲、宋令东、王浩泽3名航天员组成，蔡旭哲担任指令长。这是蔡旭哲时隔两年再度执行太空任务，宋令东和王浩泽则是首次进入太空。截至目前，神舟十九号乘组已在轨工作生活近5个月，期间开展了大量科学实验与技术试验。
+
+本次出舱活动是神舟十九号乘组的第三次出舱，也是2025年中国空间站的首次出舱活动。出舱活动中，航天员们完成了空间站空间碎片防护装置的安装，这一装置对于保护空间站免受太空碎片撞击具有重要意义。同时，航天员还对舱外设备设施进行了巡检，确保空间站各系统运行正常。
+
+中国载人航天工程办公室表示，神舟十九号乘组在轨期间状态良好，各项工作进展顺利。接下来，乘组将继续开展空间科学实验和技术试验，为空间站长期运营积累宝贵经验。按照计划，神舟十九号乘组将于2025年4月底返回东风着陆场，神舟二十号乘组将接续执行任务。`,
+                
+                'sci-002': `中国科学家通过嫦娥六号采回的月球背面月壤样品研究，取得重大科学突破，确定月球最古老、最大的撞击遗迹——南极-艾特肯盆地形成于42.5亿年前。这一成果首次为人类揭开了月球背面的演化历史，相关研究成果于3月21日正式发布。
+
+南极-艾特肯盆地位于月球背面，直径约2500公里，深度超过8公里，是太阳系中已知最大的撞击盆地之一。由于其巨大的规模和古老的历史，该盆地被认为是研究月球早期演化的关键区域。然而，由于月球潮汐锁定，地球始终无法直接观测到月球背面，人类对这片区域的了解十分有限。
+
+2024年6月，嫦娥六号探测器成功着陆月球背面南极-艾特肯盆地内的阿波罗盆地，采集了1935.3克月壤样品并返回地球。这是人类首次获得月球背面样品，为研究月球背面地质演化提供了宝贵材料。
+
+中国科学院地质与地球物理研究所联合国家天文台等单位的科研团队，对嫦娥六号样品进行了系统分析。通过先进的同位素测年技术，研究人员确定南极-艾特肯盆地形成于42.5亿年前，这一时间点正值太阳系早期大规模撞击事件的高峰期。该发现为理解月球早期撞击历史、深部物质组成以及太阳系早期演化提供了关键证据，也为后续月球探测和资源开发提供了重要科学支撑。`,
+                
+                'tec-001': `据央视新闻联播报道，国家推出的以旧换新政策成效显著，截至2025年3月，政策带动数码产品销售达669.5亿元，有效激发了消费市场的活力。与此同时，春日旅游持续红火，新场景、新业态不断涌现，进一步释放了消费潜力。
+
+以旧换新政策是国家为扩大内需、促进消费而推出的一项重要举措。政策涵盖手机、电脑、家电等数码产品，消费者在购买新产品时可享受一定的补贴优惠，同时将旧产品交由指定渠道回收处理。这一政策既降低了消费者的购买成本，又促进了电子产品的更新换代和循环利用。
+
+数据显示，以旧换新政策实施以来，数码产品消费市场呈现明显回暖态势。智能手机、笔记本电脑、平板电脑等产品销量大幅增长，其中高端产品占比提升明显，反映出消费者对品质生活的追求。同时，政策也带动了相关产业链的发展，从制造到回收的完整产业链条更加完善。
+
+与数码消费相呼应的是春日旅游市场的繁荣。随着天气转暖，各地推出丰富多彩的春季旅游产品和活动，赏花游、踏青游、乡村游等受到消费者青睐。文旅融合新场景不断涌现，如沉浸式体验、数字文旅、夜间经济等，为游客提供了全新的消费体验。
+
+专家指出，以旧换新政策和春日旅游热潮共同反映出我国消费市场的巨大潜力和韧性。随着一系列促消费政策的持续发力，消费对经济增长的基础性作用将进一步增强，为经济高质量发展提供有力支撑。`,
+                
+                'pol-001': `当地时间3月21日，美国总统特朗普在白宫椭圆形办公室发表讲话，正式宣布授予波音公司生产美国空军"下一代空中优势"（NGAD）战斗机的合同，并将该第六代战机命名为F-47。这一决定标志着美国空军战斗机发展进入新阶段，也引发了国际社会对军事航空领域发展趋势的广泛关注。
+
+F-47是美国空军继F-22"猛禽"和F-35"闪电II"之后研发的最新一代战斗机。据美方介绍，F-47将采用先进的隐身技术、人工智能辅助决策系统、定向能武器等前沿技术，具备更强的空中优势作战能力和网络中心战能力。该机型预计将在2030年左右开始服役，逐步取代现役的F-22战斗机。
+
+波音公司击败洛克希德·马丁公司获得这一价值数百亿美元的合同。波音表示，将在美国多地设立生产线，预计将为美国创造数万个就业岗位。然而，这一项目也面临成本超支和技术风险的挑战。此前，F-35项目在研发过程中就曾出现严重的成本超支和进度延误问题。
+
+国际社会对F-47项目的反应不一。美国盟友普遍表示欢迎，认为这将增强北约的空中作战能力。而俄罗斯等国则批评美国此举将加剧全球军备竞赛，破坏战略稳定。中国军事专家表示，各国发展新一代战机是正常国防建设需要，但应警惕将军事技术用于霸权主义和强权政治，维护世界和平与稳定才是国际社会的共同责任。`,
+                
+                'fin-001': `中国人民银行相关负责人近日表示，将根据国内外经济金融形势和金融市场运行情况，择机实施降准降息操作，以保持流动性合理充裕，降低实体经济融资成本，支持经济高质量发展。
+
+当前，全球经济复苏进程面临诸多不确定性，主要经济体货币政策分化加剧。美国经济虽然保持增长，但通胀压力依然存在，美联储在降息问题上态度谨慎。欧洲经济则面临增长乏力的困境，欧洲央行已启动降息周期。在此背景下，中国货币政策保持灵活适度，为经济稳定增长提供有力支撑。
+
+从国内情况看，中国经济延续回升向好态势，但仍面临有效需求不足、部分行业产能过剩等挑战。适时降准可以增加银行体系长期流动性，支持信贷投放；降息则有助于降低企业融资成本，激发投资和消费活力。两者协同发力，将更好发挥货币政策工具的总量和结构双重功能。
+
+市场分析人士认为，降准降息的空间和必要性都在增加。一方面，当前金融机构加权平均存款准备金率仍有下调空间；另一方面，贷款市场报价利率（LPR）改革后，政策利率向市场利率的传导更加顺畅，降息效果将更为明显。
+
+央行强调，将坚持稳健的货币政策基调，不搞"大水漫灌"，注重精准施策，引导金融资源更多流向科技创新、绿色发展、中小微企业等重点领域和薄弱环节，为完成全年经济社会发展目标任务创造良好货币金融环境。`,
+                
+                'aut-001': `国家市场监督管理总局近日发布通告，2025年我国共实施汽车召回190次，涉及车辆684.6万辆，分别较上年下降18.5%和39.1%。其中，新能源汽车召回105次，涉及车辆265.2万辆，占召回总量的38.7%，反映出新能源汽车保有量快速增长的同时，质量安全问题也日益受到关注。
+
+从召回原因来看，主要涉及制动系统、动力电池、电控系统等关键部件。其中，动力电池相关召回占新能源汽车召回的45%以上，主要表现为电池热失控风险、充电故障等问题。市场监管总局表示，将加强对新能源汽车召回的监管力度，督促企业落实质量安全主体责任。
+
+2025年，我国新能源汽车产销量继续保持高速增长，市场占有率超过35%。随着保有量的快速增加，新能源汽车的质量安全问题成为社会关注的焦点。国家不断完善新能源汽车安全监管体系，建立了车辆事故报告制度、缺陷调查制度等，形成了较为完善的新能源汽车安全监管闭环。
+
+市场监管总局提醒消费者，要密切关注车辆召回信息，及时配合生产企业进行召回维修。同时，要正确使用和维护车辆，定期进行安全检查，发现异常情况及时送修。对于新能源汽车，要特别注意充电安全，避免在高温、潮湿等恶劣环境下充电，不要私自改装车辆电气系统。
+
+专家表示，汽车召回制度的实施体现了政府对消费者权益的保护和对产品质量安全的重视。随着监管体系的不断完善和技术水平的提升，我国汽车产品质量将持续改善，为消费者提供更加安全可靠的出行保障。`,
+                
+                'lif-001': `3月21日是第13个"国际森林日"，今年的主题是"森林与食物：森林对于维持粮食生产至关重要"。记者从国家林业和草原局了解到，2024年我国森林食物产量超2亿吨，成为继粮食、蔬菜之后的第三大重要农产品，森林食品产业已成为推动乡村振兴和农民增收的重要力量。
+
+森林食物是指来源于森林生态系统，可供人类食用的植物、动物、微生物及其制品，包括木本粮油、林果、林菌、林菜、林药、林畜等。我国森林面积达2.31亿公顷，森林覆盖率24.02%，丰富的森林资源为发展森林食品产业提供了得天独厚的条件。
+
+近年来，国家林草局大力发展经济林、林下经济等绿色产业，推动森林食品标准化生产、品牌化经营。目前，全国经济林面积超过7亿亩，年产值超过2万亿元，带动数千万林农增收致富。油茶、核桃、板栗、枣、苹果、柑橘等经济林产品产量稳居世界前列。
+
+森林食品以其绿色、生态、健康的特点，越来越受到消费者青睐。与农田作物相比，森林食品生长周期长、营养物质积累丰富，且多生长在偏远山区，远离工业污染，具有天然的品质优势。发展森林食品产业，不仅可以满足人民群众对优质食品的需求，还能有效利用林地资源，实现生态保护与经济发展的双赢。
+
+国家林草局表示，将继续践行"绿水青山就是金山银山"理念，科学利用森林资源，大力发展森林食品产业，让更多绿色优质森林食品走进千家万户，为健康中国建设和乡村全面振兴作出更大贡献。`
+            };
+            
+            return briefs[article.id] || article.summary;
+        }
+        
+        // 渲染文章
+        function renderArticle(article, relatedArticles) {
+            const container = document.getElementById('articleContainer');
+            
+            const brief = generateBrief(article);
+            
+            // 生成相关推荐HTML
+            let relatedHtml = '';
+            if (relatedArticles.length > 0) {
+                relatedHtml = `
+                    <div class="related-section">
+                        <div class="related-title">相关推荐</div>
+                        <div class="related-list">
+                            ${relatedArticles.map(a => `
+                                <div class="related-item" onclick="location.href='article.html?id=${a.id}'">
+                                    <div class="related-item-title">${a.title}</div>
+                                    <div class="related-item-source">${a.source}</div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            }
+            
+            container.innerHTML = `
+                <article class="article-card">
+                    <img class="article-image" src="${article.image_url}" alt="${article.title}">
+                    <div class="article-content">
+                        <span class="article-category">${article.category.icon} ${article.category.name}</span>
+                        <h1 class="article-title">${article.title}</h1>
+                        <div class="article-meta">
+                            <span class="article-source">${article.source}</span>
+                            <span>${article.publish_time}</span>
+                        </div>
+                        
+                        <div class="brief-section">
+                            <div class="brief-label">新闻简报</div>
+                            <div class="brief-content">
+                                ${brief.split('\n\n').map(p => `<p>${p}</p>`).join('')}
+                            </div>
+                        </div>
+                        
+                        <div class="original-section">
+                            <div class="original-title">📎 查看原始报道</div>
+                            <a class="original-link" href="${article.url}" target="_blank">
+                                阅读原文 →
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                ${relatedHtml}
+            `;
+        }
+        
+        // 加载数据
+        async function loadArticle() {
+            const articleId = getParam('id');
+            if (!articleId) {
+                document.getElementById('articleContainer').innerHTML = '<div class="error">文章ID不能为空</div>';
+                return;
+            }
+            
+            try {
+                const response = await fetch('./data/news.json');
+                if (!response.ok) throw new Error('加载失败');
+                const data = await response.json();
+                
+                const article = findArticle(data, articleId);
+                if (!article) {
+                    document.getElementById('articleContainer').innerHTML = '<div class="error">文章不存在</div>';
+                    return;
+                }
+                
+                // 获取相关文章（同分类的其他文章）
+                const relatedArticles = article.category.articles
+                    .filter(a => a.id !== articleId)
+                    .slice(0, 3);
+                
+                renderArticle(article, relatedArticles);
+                
+                // 更新页面标题
+                document.title = `${article.title} - 每日热点`;
+            } catch (error) {
+                document.getElementById('articleContainer').innerHTML = '<div class="error">加载失败，请刷新重试</div>';
+            }
+        }
+        
+        // 初始化
+        document.addEventListener('DOMContentLoaded', loadArticle);
+    </script>
+</body>
+</html>
