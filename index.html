@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>每日新闻 - Daily News</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding-bottom: 20px;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header h1 {
+            color: #667eea;
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .header .date {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .nav-tabs {
+            display: flex;
+            overflow-x: auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            gap: 8px;
+            scrollbar-width: none;
+        }
+
+        .nav-tabs::-webkit-scrollbar {
+            display: none;
+        }
+
+        .nav-tab {
+            flex-shrink: 0;
+            padding: 8px 16px;
+            background: white;
+            border: 2px solid #667eea;
+            border-radius: 20px;
+            color: #667eea;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .nav-tab.active {
+            background: #667eea;
+            color: white;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 15px;
+        }
+
+        .category-section {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .category-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .category-title {
+            color: white;
+            font-size: 18px;
+            margin: 20px 0 15px;
+            padding-left: 10px;
+            border-left: 4px solid white;
+        }
+
+        .news-card {
+            background: white;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease;
+        }
+
+        .news-card:active {
+            transform: scale(0.98);
+        }
+
+        .news-card .tag {
+            display: inline-block;
+            padding: 3px 8px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 4px;
+            font-size: 11px;
+            margin-bottom: 8px;
+        }
+
+        .news-card .title {
+            font-size: 15px;
+            color: #333;
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+
+        .news-card .summary {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .news-card .meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: #999;
+        }
+
+        .news-card .source {
+            color: #667eea;
+        }
+
+        .hot-badge {
+            display: inline-block;
+            padding: 2px 6px;
+            background: #ff4757;
+            color: white;
+            border-radius: 3px;
+            font-size: 10px;
+            margin-left: 5px;
+        }
+
+        .footer {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 12px;
+            margin-top: 30px;
+            padding: 20px;
+        }
+
+        .refresh-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: white;
+            border: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 每日新闻</h1>
+        <div class="date" id="currentDate">2026 年 3 月 22 日 星期日</div>
+    </div>
+
+    <div class="nav-tabs">
+        <div class="nav-tab active" data-category="society">社会</div>
+        <div class="nav-tab" data-category="sports">体育</div>
+        <div class="nav-tab" data-category="entertainment">娱乐</div>
+        <div class="nav-tab" data-category="science">科教</div>
+        <div class="nav-tab" data-category="tech">科技</div>
+        <div class="nav-tab" data-category="politics">时政</div>
+        <div class="nav-tab" data-category="finance">财经</div>
+        <div class="nav-tab" data-category="auto">汽车</div>
+        <div class="nav-tab" data-category="life">生活</div>
+    </div>
+
+    <div class="container">
+        <!-- 社会新闻 -->
+        <div class="category-section active" id="society">
+            <h2 class="category-title">🏛️ 社会新闻</h2>
+            <div class="news-card">
+                <span class="tag">热点</span>
+                <h3 class="title">中国发展高层论坛 2026 年年会今日在北京召开<span class="hot-badge">HOT</span></h3>
+                <p class="summary">年会主题为"'十五五'的中国：高质量发展与共创新机遇"，将围绕宏观政策、人工智能产业化、新能源产业发展等议题举行 13 场专题研讨会。</p>
+                <div class="meta">
+                    <span class="source">新浪财经</span>
+                    <span>3 月 22 日</span>
+                </div>
+            </div>
+            <div class="news-card">
+                <span class="tag">聚焦</span>
+                <h3 class="title">2026 年节水中国行·福州活动在闽江之心举办</h3>
+                <p class="summary">2026 年节水中国行·福州于 3 月 22 日在闽江之心举办，倡导全民节水意识，推动水资源可持续利用。</p>
+                <div class="meta">
+                    <span class="source">左海明珠网</span>
+                    <span>3 月 22 日</span>
+                </div>
+            </div>
+            <div class="news-card">
+                <span class="tag">民生</span>
+                <h3 class="title">福建出台养老新规，5 月 1 日起施行</h3>
+                <p class="summary">福建省出台养老服务新规，将进一步规范养老市场，提升养老服务质量，保障老年人权益。</p>
+                <div class="meta">
+                    <span class="source">福建日报</span>
+                    <span>3 月 21 日</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 体育新闻 -->
+        <div class="category-section" id="sports">
+            <h2 class="category-title">⚽ 体育运动</h2>
+            <div class="news-card">
+                <span class="tag">热点</span>
+                <h3 class="title">温网将首次引入视频回放技术<span class="hot-badge">HOT</span></h3>
+                <p class="summary">2026 年温布尔登网球锦标赛将首次引入视频回放技术，球员可申请复核球是否二次落地、是否触碰对手等情况，复核次数不设上限。</p>
+                <div class="meta">
+                    <span class="source">新华社</span>
+                    <span>3 月 21 日</span>
+                </div>
+            </div>
+            <div class="news-card">
+                <span class="tag">网球</span>
+                <h3 class="title">郑钦文首胜萨巴伦卡引爆社交平台"玄学梗"</h3>
+                <p class="summary">郑钦文在罗马站直落两盘击败萨巴伦卡，终结六连败"魔咒"，"七局玄学"成为社交媒体热议话题。</p>
+                <div class="meta">
+                    <span class="source">新浪体育</span>
+                    <span>3 月 21 日</span>
+                </div>
+            </div>
+            <div class="news-card">
+                <span class="tag">争议</span>
+                <h3 class="title">阿尔卡拉斯"最年轻全满贯"标语引球迷不满</h3>
+                <p class="summary">阿尔卡拉斯携带印有"史上最年轻拿下四大满贯者"字样的球包，被批评不尊重格拉芙和小威等传奇选手。</p>
+                <div class="meta">
+                    <span class="source">新浪网球</span>
+                    <span>3 月 21 日</span>
+                </div>
+            </div>
+            <div class="news-card">
+                <span class="tag">游泳</span>
+                <h3 class="title">McEvoy 打破男子 50 米自由泳世界纪录</h3>
+                <p class="summary">在游泳中国公开赛上，澳大利亚选手 McEvoy 打破了保持 16 年的男子 50 米自由泳世界纪录。</p>
+                <div class="meta">
+                    <span class="source">新华社</span>
+                    <span>3 月 20 日</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 娱乐新闻 -->
+        <div class="category-section" id="entertainment">
+            <h2 class="category-title">🎬 影音娱乐</h2>
+            <div class="news-card">
+                <span class="tag">热点</span>
+                <h3 class="title">白玉兰奖 6 月 26 日揭晓，杨紫肖战赵露思争夺视帝视后<span class="hot-badge">HOT</span></h3>
+                <p class="summary">第 31 届上海电视节白玉兰奖定于 6 月 26 日揭晓，《生命树》《藏海传》《许我耀眼》等年度爆款剧集入围。</p>
+                <div class="meta">
+                    <span class="source">新浪娱乐</span>
+                    <span>3 月 21 日</span>
+                </div>
+            </div>
+            <div class="news-card">
+                <span class="tag">影视</span>
+                <h3 class="title">陈飞宇战损将军造型引热议</h3>
+                <p class="summary">《白日提灯》中陈飞宇饰演的战损将军段胥造型成为引爆观众讨论的核心意象，承载角色宿命与东方美学。</p>
+                <div class="meta">
+                    <span class="source">新浪影视</span>
+                    <span>3 月 21 日</span>
+                </div>
+            </div>
+            <div class="news-card">
+                <span class="tag">剧集</span>
+                <h3 class="title">《隐身的名字》热播，闫妮演技获好评</h3>
+                <p class="summary">电视剧《隐身的名字》更新至第 8 集，质量获认可但热度一般，闫妮演技表现突出。</p>
+                <div class="meta">
+                    <span class="source">新浪娱乐</span>
+                    <span>3 月 21 日</span>
+                </div>
+            </div>
+            <div class="news-card">
+                <span class="tag">微短剧</span>
+                <h3 class="title">微短剧《请回答 1937》研讨会举行</h3>
+                <p class="summary">这部入选国家广电总局推荐目录的作品，以青春视角和历史情怀引发关于微短剧艺术潜能的探讨。</p>
+                <div class="meta">
+                    <span class="source">新华网</span>
+                    <span>3 月 19 日</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 科教新闻 -->
+        <div class="category-section" id="science">
+            <h2 class="category-title">🔬 科学教育</h2>
+            <div class="news-card">
+                <span class="tag">热点</span>
+                <h3 class="title">浙江公布首批科技高中改革试点<span class="hot-badge">HOT</span></h3>
+                <p class="summary">浙江省公布首批科技高中改革试点学校，推动科技创新人才培养，深化高中教育改革。</p>
+                <div class="meta">
+                    <span class="source">中国教育报</span>
+                    <span>3 月 21 日</span>
+                </div>
+            </div>
+            <div class="news-card">
+                <span class="tag">政策</span>
+                <h3 class="title">重庆正式实施中小学春秋假</h3>
+                <p class="summary">重庆市正式实施中小学春秋假制度，让学生有更多时间参与社会实践和户外活动。</p>
+                <div class="meta">
+                    <span class="source">新华网</span>
+                    <span>3 月 17 日</span>
+                </div>
+            </div>
+            <div class="news-card">
+                <span class="tag">规范</span>
+                <h3 class="title">"AI+"培训须纳入规范管理轨道</h3>
+                <p class="summary">针对 AI 培训市场乱象，相关部门要求将"AI+"培训纳入规范管理，保障培训质量和学员权益。</p>
+                <div class="meta">
+                    <span class="source">中国青年报</span>
+                    <span>3 月 20 日</span>
+                </div>
+            </div>
+            <div class="news-card">
+                <span class="tag">健康</span>
+                <h3 class="title">云南推进"零近视"中小学建设</h3>
+                <p class="summary">云南省推进"零近视"中小学建设，加强学生视力保护，降低青少年近视率。</p>
+                <div class="meta">
+                    <span class="source">新华网</span>
+                    <span>3 月 18 日</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 科技新闻 -->
+        <div class="category-section" id="tech">
+            <h2 class="category-title">📱 数码科技</h2>
+            <div class="news-card">
+                <span class="tag">热点</span>
+                <h3 class="title">内存大涨价倒逼手机 SD 卡复活<span class="hot-badge">HOT</span></h3>
+                <p class="summary">手机存储价格大幅攀升，部分厂商考虑重新引入 SD 卡扩展功能，这项消失多年的功能或重返主流市场。</p>
+                <div class="meta">
+                    <span class="source">快科技</span>
+                    <span>3 月 21 日</span>
+                </div>
+            </div>
+            <div class="news-card">
+                <span class="tag">市场</span>
+                <h3 class="title">终端市场集体喊"涨"，手机面板持续走"跌"</h3>
+                <p class="summary">三星、荣耀、OPPO 等主流厂商上调新品售价，但作为核心成本的面板价格却持续走低。</p>
+                <div class="meta">
+                    <span class="source">爱集微</span>
+                    <span>3 月 21 日</span>
+                </div>
+            </div>
+            <div class="news-card">
+                <span class="tag">新品</span>
+                <h3 class="title">一加 Ace 6 至尊版备案：天玑 9500 深度特调</h3>
+                <p class="summary">一加 Ace 6 至尊版正式备案，搭载天玑 9500 处理器并进行深度特调，计划 4 月份发布。</p>
+                <div class="meta">
+                    <span class="source">快科技</span>
+                    <span>3 月 21 日</span>
+                </div>
+            </div>
+            <div class="news-card">
+                <span class="tag">展会</span>
+                <h3 class="title">SEMICON/FPD China2026 将于 3 月 25 日在上海开幕</h3>
+                <p class="summary">全球规模最大半导体"嘉年华"将于 3 月 25 日在上海新国际博览中心开幕，展览面积超 10 万平方米。</p>
+                <div class="meta">
+                    <span class="source">虎嗅网</span>
+                    <span>3 月 22 日</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 时政新闻 -->
+        <div class="category-section" id="politics">
+            <h2 class="category-title">🏛️ 时政军事</h2>
+            <div class="news-card">
+                <span class="tag">热点</span>
+                <h3 class="title">习近平会见土库曼斯坦民族领袖别尔德穆哈梅多夫<span class="hot-badge">HOT</span></h3>
+                <p class="summary">国家主席习近平会见土库曼斯坦民族领袖、人民委员会主席别尔德穆哈梅多夫，双方就深化中土战略伙伴关系交换意见。</p>
+                <div class="meta">
+                    <span class="source">新华社</span>
+                    <span>3 月 18 日</span>
+                </div>
+            </div>
+            <div class="news-card">
+                <span class="tag">重要文章</span>
+                <h3 class="title">《求是》杂志发表习近平总书记重要文章</h3>
+                <p class="summary">《求是》杂志发表习近平总书记重要文章《推动海洋经济高质量发展》，强调建设海洋强国。</p>
+                <div class="meta">
+                    <span class="source">求是网</span>
+                    <span>3 月 15 日</span>
+                </div>
+            </div>
+            <div class="news-card">
+                <span class="tag">国防</span>
+                <h3 class="title">习近平：充分发挥政治建军特有优势</h3>
+                <p class="summary">习近平在出席解放军和武警部队代表团全体会议时强调，凝心聚力推动国防和军队现代化行稳致远。</p>
+                <div class="meta">
+                    <span class="source">新华社</span>
+                    <span>3 月 9 日</span>
+                </div>
+            </div>
+            <div class="news-card">
+                <span class="tag">充电设施</span>
+                <h3 class="title">我国电动汽车充电基础设施总数超 2100 万个</h3>
+                <p class="summary">截至 3 月 21 日，我国电动汽车充电基础设施（充电枪）总数已超过 2100 万个，位居全球第一。</p>
+                <div class="meta">
+                    <span class="source">新华网</span>
+                    <span>3 月 21 日</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 财经新闻 -->
+        <div class="category-section" id="finance">
+            <h2 class="category-title">💰 财经动态</h2>
+            <div class="news-card">
+                <span class="tag">热点</span>
+                <h3 class="title">中国发展高层论坛 2026 年年会召开<span class="hot-badge">HOT</span></h3>
+                <p class="summary">论坛主题为"'十五五'的中国：高质量发展与共创新机遇"，将举行 13 场专题研讨会及数场闭门研讨会。</p>
+                <div class="meta">
+                    <span class="source">新浪财经</span>
+                    <span>3 月 22 日</span>
+                </div>
+            </div>
+            <div class="news-card">
+                <span class="tag">政策</span>
+                <h3 class="title">三部门部署规范新能源汽车产业竞争秩序</h3>
+                <p class="summary">相关部门联合部署，进一步规范新能源汽车产业竞争秩序，促进行业健康发展。</p>
+                <div class="meta">
+                    <span class="source">新华网</span>
+                    <span>3 月 19 日</span>
+                </div>
+            </div>
+            <div class="news-card">
+                <span class="tag">财政</span>
+                <h3 class="title">前 2 个月全国一般公共预算收入同比增长 0.7%</h3>
+                <p class="summary">财政部数据显示，前 2 个月全国一般公共预算收入实现小幅增长，重点领域支出持续发力。</p>
+                <div class="meta">
+                    <span class="source">新华网</span>
+                    <span>3 月 20 日</span>
+                </div>
+            </div>
+            <div class="news-card">
+                <span class="tag">金融</span>
+                <h3 class="title">中小金融机构"瘦身"加速</h3>
+                <p class="summary">金融价值观专栏报道，中小金融机构"瘦身"加速，筑牢风险底线赋能实体经济高质量发展。</p>
+                <div class="meta">
+                    <span class="source">新华网</span>
+                    <span>3 月 19 日</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 汽车新闻 -->
+        <div class="category-section" id="auto">
+            <h2 class="category-title">🚗 汽车资讯</h2>
+            <div class="news-card">
+                <span class="tag">热点</span>
+                <h3 class="title">比亚迪 ATTO 3 Evo 英国上市：3.9 万英镑起售<span class="hot-badge">HOT</span></h3>
+                <p class="summary">比亚迪新款元 PLUS 海外版在英国上市，入门版售价 38990 英镑，WLTP 工况续航可达约 508km。</p>
+                <div class="meta">
+                    <span class="source">IT 之家</span>
+                    <span>3 月 21 日</span>
+                </div>
+            </div>
+            <div class="news-card">
+                <span class="tag">新品</span>
+                <h3 class="title">广汽埃安 N60 将于 3 月 25 日盲订</h3>
+                <p class="summary">广汽埃安全新车型 AION N60 将于 3 月 25 日开启盲订，全系标配零重力座椅、按摩、5 连杆悬架等配置。</p>
+                <div class="meta">
+                    <span class="source">IT 之家</span>
+                    <span>3 月 21 日</span>
+                </div>
+            </div>
+            <div class="news-card">
+                <span class="tag">预售</span>
+                <h3 class="title">东风日产 NX8 五座 SUV 预售起价 20 万</h3>
+                <p class="summary">东风日产 NX8 五座 SUV 开启预售，起售价 20 万元，定位"全家人更理想的 SUV"。</p>
+                <div class="meta">
+                    <span class="source">新浪汽车</span>
+                    <span>3 月 21 日</span>
+                </div>
+            </div>
+            <div class="news-card">
+                <span class="tag">行业</span>
+                <h3 class="title">三部门：加快补齐汽车芯片、基础软件等短板</h3>
+                <p class="summary">相关部门联合发文，要求加快补齐汽车芯片、基础软件等短板，提升产业链自主可控能力。</p>
+                <div class="meta">
+                    <span class="source">新华网</span>
+                    <span>3 月 20 日</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 生活新闻 -->
+        <div class="category-section" id="life">
+            <h2 class="category-title">🏠 生活资讯</h2>
+            <div class="news-card">
+                <span class="tag">热点</span>
+                <h3 class="title">福建出台养老新规，5 月 1 日起施行<span class="hot-badge">HOT</span></h3>
+                <p class="summary">福建省出台养老服务新规，将进一步规范养老市场，提升养老服务质量，保障老年人权益。</p>
+                <div class="meta">
+                    <span class="source">福建日报</span>
+                    <span>3 月 21 日</span>
+                </div>
+            </div>
+            <div class="news-card">
+                <span class="tag">民生</span>
+                <h3 class="title">我国电动汽车充电基础设施总数超 2100 万个</h3>
+                <p class="summary">截至 3 月 21 日，我国电动汽车充电基础设施（充电枪）总数已超过 2100 万个，为新能源汽车普及提供保障。</p>
+                <div class="meta">
+                    <span class="source">新华网</span>
+                    <span>3 月 21 日</span>
+                </div>
+            </div>
+            <div class="news-card">
+                <span class="tag">网络</span>
+                <h3 class="title">中央网信办全面规范短视频内容标注</h3>
+                <p class="summary">中央网信办发布新规，全面规范短视频内容标注，提升内容透明度和用户体验。</p>
+                <div class="meta">
+                    <span class="source">新华社</span>
+                    <span>3 月 21 日</span>
+                </div>
+            </div>
+            <div class="news-card">
+                <span class="tag">环保</span>
+                <h3 class="title">2026 年节水中国行·福州活动举办</h3>
+                <p class="summary">2026 年节水中国行·福州于 3 月 22 日在闽江之心举办，倡导全民节水意识。</p>
+                <div class="meta">
+                    <span class="source">左海明珠网</span>
+                    <span>3 月 22 日</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>每日新闻 Daily News</p>
+        <p>更新于 2026 年 3 月 22 日</p>
+        <p style="margin-top: 10px;">🤖 由 TaskKeeper 自动收集整理</p>
+    </div>
+
+    <button class="refresh-btn" onclick="location.reload()">🔄</button>
+
+    <script>
+        // 设置当前日期
+        const now = new Date();
+        const dateStr = now.toLocaleDateString('zh-CN', { 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric',
+            weekday: 'long'
+        });
+        document.getElementById('currentDate').textContent = dateStr;
+
+        // 标签页切换
+        document.querySelectorAll('.nav-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                // 移除所有激活状态
+                document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.category-section').forEach(s => s.classList.remove('active'));
+                
+                // 添加激活状态
+                this.classList.add('active');
+                const categoryId = this.getAttribute('data-category');
+                document.getElementById(categoryId).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
