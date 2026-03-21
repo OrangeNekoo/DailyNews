@@ -1,0 +1,428 @@
+{
+  "update_time": "2025-03-22T02:04:15+08:00",
+  "categories": [
+    {
+      "id": "society",
+      "name": "社会新闻",
+      "icon": "🏘️",
+      "articles": [
+        {
+          "id": "soc-001",
+          "title": "国务院常务会议审议通过《婚姻登记条例(修订草案)》",
+          "summary": "3月21日，国务院总理李强主持召开国务院常务会议，研究建立健全涉企收费长效监管机制有关举措，审议通过《婚姻登记条例(修订草案)》，将'跨省通办'等改革试点成果上升为法律制度。",
+          "source": "央视新闻",
+          "url": "https://www.gov.cn/",
+          "image_url": "https://picsum.photos/400/300?random=1",
+          "publish_time": "2025-03-21",
+          "hotness": 95
+        },
+        {
+          "id": "soc-002",
+          "title": "2025年苏州花展今日开幕，20余万株郁金香亮相",
+          "summary": "2025年苏州花展（上方山百花节）于3月22日至5月12日举行，以'醉美花海 春到苏州'为主题，展示20余万株郁金香，搭配1000余种新优花卉品种。",
+          "source": "苏州市园林局",
+          "url": "https://www.thepaper.cn/newsDetail_forward_26785325",
+          "image_url": "https://picsum.photos/400/300?random=2",
+          "publish_time": "2025-03-22",
+          "hotness": 88
+        },
+        {
+          "id": "soc-003",
+          "title": "《人脸识别技术应用安全管理办法》公布，6月1日起施行",
+          "summary": "国家互联网信息办公室、公安部联合公布《人脸识别技术应用安全管理办法》，明确任何组织和个人不得在宾馆客房、公共浴室等私密空间内部安装人脸识别设备。",
+          "source": "国家网信办",
+          "url": "https://www.cac.gov.cn/",
+          "image_url": "https://picsum.photos/400/300?random=3",
+          "publish_time": "2025-03-21",
+          "hotness": 85
+        },
+        {
+          "id": "soc-004",
+          "title": "国家医保局：基本医疗保险参保率巩固在95%",
+          "summary": "国家医保局发布统计，截至2024年底，我国基本医疗保险参保人数约13.26亿人，按应参人数测算，医保参保率稳定在95%。",
+          "source": "国家医保局",
+          "url": "http://www.nhsa.gov.cn/",
+          "image_url": "https://picsum.photos/400/300?random=4",
+          "publish_time": "2025-03-21",
+          "hotness": 82
+        }
+      ]
+    },
+    {
+      "id": "sports",
+      "name": "体育运动",
+      "icon": "⚽",
+      "articles": [
+        {
+          "id": "spo-001",
+          "title": "全国春季游泳锦标赛：张展硕收获第三金",
+          "summary": "2025年全国春季游泳锦标赛在青岛落幕，山东队小将张展硕在男子200米个人混合泳中夺冠，收获个人第三金，并刷新该项目个人最好成绩。",
+          "source": "新浪体育",
+          "url": "https://news.sina.cn/2025-03-22/detail-ineqnpis3235951.d.html",
+          "image_url": "https://picsum.photos/400/300?random=5",
+          "publish_time": "2025-03-22",
+          "hotness": 90
+        },
+        {
+          "id": "spo-002",
+          "title": "南京室内田径世锦赛开赛，中国队老将宝刀不老",
+          "summary": "2025年南京世界田联室内田径锦标赛于3月21日开幕，中国队老将朱亚明、谢震业和巩立姣在首日比赛中表现出色，展现了老将的实力。",
+          "source": "新华社",
+          "url": "https://www.xinhuanet.com/",
+          "image_url": "https://picsum.photos/400/300?random=6",
+          "publish_time": "2025-03-21",
+          "hotness": 86
+        },
+        {
+          "id": "spo-003",
+          "title": "苏翊鸣摘得2025世界单板滑雪锦标赛银牌",
+          "summary": "2025年世界单板滑雪锦标赛男子坡面障碍技巧决赛，首次参加世锦赛的中国选手苏翊鸣摘得银牌，创造了中国单板滑雪新历史。",
+          "source": "央视新闻",
+          "url": "https://sports.cctv.com/",
+          "image_url": "https://picsum.photos/400/300?random=7",
+          "publish_time": "2025-03-21",
+          "hotness": 88
+        },
+        {
+          "id": "spo-004",
+          "title": "CBA常规赛：辽宁男篮主场135比108战胜广州男篮",
+          "summary": "辽宁男篮在CBA常规赛中主场以135比108战胜广州男篮，取得四连胜。主教练杨鸣表示球队在默契和积极性方面有所提升。",
+          "source": "腾讯体育",
+          "url": "https://sports.qq.com/",
+          "image_url": "https://picsum.photos/400/300?random=8",
+          "publish_time": "2025-03-22",
+          "hotness": 80
+        }
+      ]
+    },
+    {
+      "id": "entertainment",
+      "name": "影音娱乐",
+      "icon": "🎬",
+      "articles": [
+        {
+          "id": "ent-001",
+          "title": "《哪吒2》密钥再延一个月，全球票房破152亿元",
+          "summary": "《哪吒2》密钥延期至4月30日，全球票房突破152亿元，位列全球影史第五。数据显示，白领群体贡献最多票房，达59.92%。",
+          "source": "新浪娱乐",
+          "url": "https://news.sina.com.cn/zx/ds/2025-03-22/doc-ineqnpix6227324.shtml",
+          "image_url": "https://picsum.photos/400/300?random=9",
+          "publish_time": "2025-03-22",
+          "hotness": 96
+        },
+        {
+          "id": "ent-002",
+          "title": "电影《遥远的普若岗日》杀青，献礼西藏自治区成立60周年",
+          "summary": "电影《遥远的普若岗日》在拉萨杀青，作为西藏自治区成立60周年的献礼影片，首次深入藏北极高海拔无人区实景拍摄。",
+          "source": "新浪娱乐",
+          "url": "https://ent.sina.com.cn/",
+          "image_url": "https://picsum.photos/400/300?random=10",
+          "publish_time": "2025-03-22",
+          "hotness": 78
+        },
+        {
+          "id": "ent-003",
+          "title": "邓萃雯《浪姐6》初舞台演唱张国荣《共同渡过》",
+          "summary": "邓萃雯在《浪姐6》初舞台上演唱张国荣经典歌曲《共同渡过》，深情演绎让观众瞬间联想到经典角色姚小蝶。",
+          "source": "芒果TV",
+          "url": "https://www.mgtv.com/",
+          "image_url": "https://picsum.photos/400/300?random=11",
+          "publish_time": "2025-03-22",
+          "hotness": 82
+        },
+        {
+          "id": "ent-004",
+          "title": "《倩女幽魂》《热烈》《速激7》集体归来，重映市场竞争激烈",
+          "summary": "多部经典影片宣布重映，包括《倩女幽魂》《热烈》《速度与激情7》等，重映市场迎来激烈竞争。",
+          "source": "新浪娱乐",
+          "url": "https://ent.sina.com.cn/",
+          "image_url": "https://picsum.photos/400/300?random=12",
+          "publish_time": "2025-03-22",
+          "hotness": 75
+        }
+      ]
+    },
+    {
+      "id": "science",
+      "name": "科学教育",
+      "icon": "🔬",
+      "articles": [
+        {
+          "id": "sci-001",
+          "title": "神舟十九号航天员乘组圆满完成第三次出舱活动",
+          "summary": "3月21日，神舟十九号航天员乘组圆满完成第三次出舱活动。按计划，乘组将于1个多月后返回地球家园，标志着我国航天事业又迈出重要一步。",
+          "source": "中国载人航天",
+          "url": "http://www.cmse.gov.cn/",
+          "image_url": "https://picsum.photos/400/300?random=13",
+          "publish_time": "2025-03-21",
+          "hotness": 94
+        },
+        {
+          "id": "sci-002",
+          "title": "中国科学家确定月球南极-艾特肯盆地形成于42.5亿年前",
+          "summary": "中国科学家通过嫦娥六号采回的月球背面月壤样品研究，确定月球最古老、最大的撞击遗迹——南极-艾特肯盆地形成于42.5亿年前。",
+          "source": "中国科学院",
+          "url": "https://www.cas.cn/",
+          "image_url": "https://picsum.photos/400/300?random=14",
+          "publish_time": "2025-03-21",
+          "hotness": 91
+        },
+        {
+          "id": "sci-003",
+          "title": "子午工程二期通过国家验收，提升空间天气预报能力",
+          "summary": "国家重大科技基础设施——子午工程二期通过国家验收，将显著提升我国空间天气预报预警能力。",
+          "source": "科技部",
+          "url": "https://www.most.gov.cn/",
+          "image_url": "https://picsum.photos/400/300?random=15",
+          "publish_time": "2025-03-21",
+          "hotness": 85
+        },
+        {
+          "id": "sci-004",
+          "title": "我国科学家取得深海小型机器人突破",
+          "summary": "我国科学家在深海小型机器人领域取得重要突破，为深海探测和资源开发提供了新的技术手段。",
+          "source": "科技日报",
+          "url": "http://www.stdaily.com/",
+          "image_url": "https://picsum.photos/400/300?random=16",
+          "publish_time": "2025-03-21",
+          "hotness": 80
+        }
+      ]
+    },
+    {
+      "id": "tech",
+      "name": "数码科技",
+      "icon": "💻",
+      "articles": [
+        {
+          "id": "tec-001",
+          "title": "以旧换新带动数码产品销售669.5亿元",
+          "summary": "据新闻联播报道，以旧换新政策带动数码产品销售达669.5亿元，春日旅游红火，新场景激发消费新活力。",
+          "source": "央视新闻",
+          "url": "https://www.cctv.com/",
+          "image_url": "https://picsum.photos/400/300?random=17",
+          "publish_time": "2025-03-22",
+          "hotness": 87
+        },
+        {
+          "id": "tec-002",
+          "title": "长三角区域外贸创新高，高新技术产品竞争力持续提升",
+          "summary": "长三角区域外贸创新高，高新技术产品竞争力持续提升，展现出中国制造的强劲实力。",
+          "source": "新华社",
+          "url": "https://www.xinhuanet.com/",
+          "image_url": "https://picsum.photos/400/300?random=18",
+          "publish_time": "2025-03-22",
+          "hotness": 83
+        },
+        {
+          "id": "tec-003",
+          "title": "《商业银行代理销售业务管理办法》发布",
+          "summary": "《商业银行代理销售业务管理办法》正式发布，进一步规范商业银行代理销售业务，保护投资者合法权益。",
+          "source": "银保监会",
+          "url": "http://www.cbirc.gov.cn/",
+          "image_url": "https://picsum.photos/400/300?random=19",
+          "publish_time": "2025-03-21",
+          "hotness": 76
+        },
+        {
+          "id": "tec-004",
+          "title": "金砖国家特殊经济区中国合作中心在杭州揭牌",
+          "summary": "金砖国家特殊经济区中国合作中心在杭州揭牌成立，将进一步深化金砖国家间的经贸合作。",
+          "source": "新华社",
+          "url": "https://www.xinhuanet.com/",
+          "image_url": "https://picsum.photos/400/300?random=20",
+          "publish_time": "2025-03-21",
+          "hotness": 78
+        }
+      ]
+    },
+    {
+      "id": "politics",
+      "name": "时政军事",
+      "icon": "🏛️",
+      "articles": [
+        {
+          "id": "pol-001",
+          "title": "特朗普宣布授予波音公司第六代战机项目合同，命名为F-47",
+          "summary": "当地时间3月21日，美国总统特朗普宣布授予波音公司生产美国空军'下一代空中优势'战斗机的合同，并将战机命名为F-47。",
+          "source": "央视新闻",
+          "url": "https://www.cctv.com/",
+          "image_url": "https://picsum.photos/400/300?random=21",
+          "publish_time": "2025-03-21",
+          "hotness": 92
+        },
+        {
+          "id": "pol-002",
+          "title": "王毅会见日本首相石破茂",
+          "summary": "3月21日，日本首相石破茂在东京会见到访的中共中央政治局委员、外交部长王毅。王毅表示，中日双方理应增进互信、加强合作。",
+          "source": "外交部",
+          "url": "https://www.mfa.gov.cn/",
+          "image_url": "https://picsum.photos/400/300?random=22",
+          "publish_time": "2025-03-21",
+          "hotness": 89
+        },
+        {
+          "id": "pol-003",
+          "title": "俄乌双方宣布24日将在沙特分别与美方代表团举行会谈",
+          "summary": "3月20日，俄乌双方宣布，24日俄罗斯、乌克兰代表团将在沙特分别与美方代表团举行会谈，讨论停火事宜。",
+          "source": "央视新闻",
+          "url": "https://www.cctv.com/",
+          "image_url": "https://picsum.photos/400/300?random=23",
+          "publish_time": "2025-03-20",
+          "hotness": 86
+        },
+        {
+          "id": "pol-004",
+          "title": "加拿大将在美国高速沿线竖广告牌反对特朗普关税",
+          "summary": "加拿大外交部长表示，加拿大将在美国高速公路沿线竖立一系列巨幅广告牌，针对美国公众开展反对特朗普关税的宣传。",
+          "source": "央视新闻",
+          "url": "https://www.cctv.com/",
+          "image_url": "https://picsum.photos/400/300?random=24",
+          "publish_time": "2025-03-21",
+          "hotness": 81
+        }
+      ]
+    },
+    {
+      "id": "finance",
+      "name": "财经动态",
+      "icon": "💰",
+      "articles": [
+        {
+          "id": "fin-001",
+          "title": "央行：根据国内外经济金融形势择机降准降息",
+          "summary": "央行表示将根据国内外经济金融形势和金融市场运作情况，择机降准降息，保持流动性合理充裕。",
+          "source": "央行官网",
+          "url": "http://www.pbc.gov.cn/",
+          "image_url": "https://picsum.photos/400/300?random=25",
+          "publish_time": "2025-03-22",
+          "hotness": 90
+        },
+        {
+          "id": "fin-002",
+          "title": "吉利汽车2025年营收3452亿元，同比增长25%",
+          "summary": "吉利汽车发布2025年全年业绩报告，总收入为3452亿元，同比增长25%；归母净利润为168.5亿元人民币。",
+          "source": "财联社",
+          "url": "https://www.cls.cn/",
+          "image_url": "https://picsum.photos/400/300?random=26",
+          "publish_time": "2025-03-18",
+          "hotness": 84
+        },
+        {
+          "id": "fin-003",
+          "title": "多家银行下调消费贷款利率，最低降至2.5%",
+          "summary": "多家银行下调消费贷款利率，最低降至2.5%，进一步降低居民融资成本，刺激消费需求。",
+          "source": "财联社",
+          "url": "https://www.cls.cn/",
+          "image_url": "https://picsum.photos/400/300?random=27",
+          "publish_time": "2025-03-22",
+          "hotness": 82
+        },
+        {
+          "id": "fin-004",
+          "title": "商务部：对原产于日、美进口间苯二酚继续征收反倾销税",
+          "summary": "商务部发布公告，对原产于日本、美国的进口间苯二酚继续征收反倾销税，实施期限为5年。",
+          "source": "商务部",
+          "url": "http://www.mofcom.gov.cn/",
+          "image_url": "https://picsum.photos/400/300?random=28",
+          "publish_time": "2025-03-22",
+          "hotness": 77
+        }
+      ]
+    },
+    {
+      "id": "auto",
+      "name": "汽车资讯",
+      "icon": "🚗",
+      "articles": [
+        {
+          "id": "aut-001",
+          "title": "2025年我国共实施汽车召回190次，涉及车辆684.6万辆",
+          "summary": "市场监管总局发布通告，2025年我国共实施汽车召回190次，涉及车辆684.6万辆，新能源汽车召回105次，涉及车辆265.2万辆。",
+          "source": "央视网",
+          "url": "https://news.cctv.com/",
+          "image_url": "https://picsum.photos/400/300?random=29",
+          "publish_time": "2025-03-19",
+          "hotness": 85
+        },
+        {
+          "id": "aut-002",
+          "title": "乘联分会：3月1-15日全国乘用车市场零售56.1万辆",
+          "summary": "乘联分会数据显示，3月1-15日全国乘用车市场零售56.1万辆，同比下降21%，较上月同期增长2%。",
+          "source": "乘联会",
+          "url": "http://www.cpcaauto.com/",
+          "image_url": "https://picsum.photos/400/300?random=30",
+          "publish_time": "2025-03-22",
+          "hotness": 79
+        },
+        {
+          "id": "aut-003",
+          "title": "过半经销商去年未完成销量目标，新车业务亏损加剧",
+          "summary": "中国汽车流通协会报告显示，2025年超过一半的经销商未能完成年度销量目标，汽车经销商亏损面增加至55.7%。",
+          "source": "澎湃新闻",
+          "url": "https://www.thepaper.cn/",
+          "image_url": "https://picsum.photos/400/300?random=31",
+          "publish_time": "2025-03-18",
+          "hotness": 81
+        },
+        {
+          "id": "aut-004",
+          "title": "中欧班列（武汉）'东风号'专列满载新能源汽车发往俄罗斯",
+          "summary": "中欧班列（武汉）'东风号'专列满载96台东风岚图新能源汽车，从中铁联集武汉中心站发车，驶往俄罗斯。",
+          "source": "新华社",
+          "url": "https://www.xinhuanet.com/",
+          "image_url": "https://picsum.photos/400/300?random=32",
+          "publish_time": "2025-03-21",
+          "hotness": 76
+        }
+      ]
+    },
+    {
+      "id": "lifestyle",
+      "name": "生活资讯",
+      "icon": "🏠",
+      "articles": [
+        {
+          "id": "lif-001",
+          "title": "国际森林日：我国森林食物产量超2亿吨",
+          "summary": "3月21日是第13个'国际森林日'，记者从国家林草局了解到，2024年我国森林食物产量超2亿吨，成为继粮食、蔬菜之后的第三大重要农产品。",
+          "source": "国家林草局",
+          "url": "http://www.forestry.gov.cn/",
+          "image_url": "https://picsum.photos/400/300?random=33",
+          "publish_time": "2025-03-21",
+          "hotness": 83
+        },
+        {
+          "id": "lif-002",
+          "title": "《中国食物与营养发展纲要(2025—2030年)》发布",
+          "summary": "《中国食物与营养发展纲要(2025—2030年)》明确，到2030年，我国多元化食物供给体系更加完善，食物优质化、特色化、品牌化水平持续提升。",
+          "source": "农业农村部",
+          "url": "http://www.moa.gov.cn/",
+          "image_url": "https://picsum.photos/400/300?random=34",
+          "publish_time": "2025-03-20",
+          "hotness": 78
+        },
+        {
+          "id": "lif-003",
+          "title": "春日旅游红火，新场景激发消费新活力",
+          "summary": "各地春日旅游持续升温，新场景、新业态不断涌现，激发消费新活力，带动文旅市场复苏。",
+          "source": "央视新闻",
+          "url": "https://www.cctv.com/",
+          "image_url": "https://picsum.photos/400/300?random=35",
+          "publish_time": "2025-03-22",
+          "hotness": 80
+        },
+        {
+          "id": "lif-004",
+          "title": "'千行万业系列招聘会'春季专场活动启动",
+          "summary": "'千行万业系列招聘会'春季专场活动启动，为求职者和用人单位搭建对接平台，促进就业。",
+          "source": "人社部",
+          "url": "http://www.mohrss.gov.cn/",
+          "image_url": "https://picsum.photos/400/300?random=36",
+          "publish_time": "2025-03-21",
+          "hotness": 75
+        }
+      ]
+    }
+  ]
+}
