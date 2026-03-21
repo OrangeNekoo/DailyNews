@@ -1,5 +1,5 @@
 {
-  "update_time": "2025-03-22T08:30:00+08:00",
+  "update_time": "2026-03-22T08:30:00+08:00",
   "categories": [
     {
       "id": "society",
@@ -8,43 +8,43 @@
       "articles": [
         {
           "id": "soc-001",
-          "title": "国务院常务会议审议通过《婚姻登记条例(修订草案)》",
-          "summary": "3月21日，国务院总理李强主持召开国务院常务会议，研究建立健全涉企收费长效监管机制有关举措，审议通过《婚姻登记条例(修订草案)》，将'跨省通办'等改革试点成果上升为法律制度，推进'全国通办'。",
-          "source": "中国政府网",
-          "url": "https://www.gov.cn/",
-          "image_url": "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=800&h=600&fit=crop",
-          "publish_time": "2025-03-21",
-          "hotness": 95
+          "title": "2026武汉马拉松鸣枪开跑，3万名跑者齐聚江城",
+          "summary": "2026武汉马拉松于3月22日鸣枪开跑，来自世界各地的30000名跑者将奔跑在江城武汉的最美春天里。赛事首次将青山区纳入赛道，全程马拉松终点调整至青山江滩。",
+          "source": "武汉市政府",
+          "url": "https://www.wuhan.gov.cn/",
+          "image_url": "https://images.unsplash.com/photo-1552674605-5d2265b4c1e2?w=800&h=600&fit=crop",
+          "publish_time": "2026-03-22",
+          "hotness": 96
         },
         {
           "id": "soc-002",
-          "title": "2025年苏州花展开幕，20余万株郁金香亮相",
-          "summary": "2025年苏州花展（上方山百花节）于3月22日至5月12日举行，以'醉美花海 春到苏州'为主题，规模较去年全面升级，将展示20余万株郁金香，搭配1000余种新优花卉品种。",
-          "source": "苏州市园林局",
-          "url": "https://www.suzhou.gov.cn/",
-          "image_url": "https://images.unsplash.com/photo-1462275646964-a0e3386b89fa?w=800&h=600&fit=crop",
-          "publish_time": "2025-03-22",
-          "hotness": 88
+          "title": "城乡居民基础养老金月最低标准提高20元",
+          "summary": "城乡居民基础养老金月最低标准正式提高20元，惠及约1.8亿60周岁以上参保老人，中央财政同步安排1.25万亿元补助资金，确保养老金按时足额发放。",
+          "source": "人社部",
+          "url": "http://www.mohrss.gov.cn/",
+          "image_url": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop",
+          "publish_time": "2026-03-21",
+          "hotness": 92
         },
         {
           "id": "soc-003",
-          "title": "《人脸识别技术应用安全管理办法》公布，6月1日起施行",
-          "summary": "国家互联网信息办公室、公安部联合公布《人脸识别技术应用安全管理办法》，明确任何组织和个人不得在宾馆客房、公共浴室等私密空间内部安装人脸识别设备。",
-          "source": "国家网信办",
-          "url": "https://www.cac.gov.cn/",
-          "image_url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop",
-          "publish_time": "2025-03-21",
-          "hotness": 85
+          "title": "教育部启动2026届高校毕业生春季促就业攻坚行动",
+          "summary": "教育部正式启动2026届高校毕业生春季促就业攻坚行动，预计举办招聘活动1.1万余场，提供岗位超1200万个，助力应届生顺利就业、稳定就业。",
+          "source": "教育部",
+          "url": "http://www.moe.gov.cn/",
+          "image_url": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&h=600&fit=crop",
+          "publish_time": "2026-03-21",
+          "hotness": 88
         },
         {
           "id": "soc-004",
-          "title": "国家医保局：基本医疗保险参保率巩固在95%",
-          "summary": "国家医保局发布统计，截至2024年底，我国基本医疗保险参保人数约13.26亿人，按应参人数测算，医保参保率稳定在95%，参保质量持续提升。",
-          "source": "国家医保局",
-          "url": "http://www.nhsa.gov.cn/",
-          "image_url": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop",
-          "publish_time": "2025-03-21",
-          "hotness": 82
+          "title": "2026年中央财政强农惠农富农政策清单发布",
+          "summary": "2026年中央财政强农惠农富农政策清单发布，包含耕地地力保护补贴、农机购置与应用补贴等16项重点内容。",
+          "source": "财政部",
+          "url": "http://www.mof.gov.cn/",
+          "image_url": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&h=600&fit=crop",
+          "publish_time": "2026-03-20",
+          "hotness": 85
         }
       ]
     },
@@ -55,43 +55,43 @@
       "articles": [
         {
           "id": "spo-001",
-          "title": "全国春季游泳锦标赛：张展硕收获第三金",
-          "summary": "2025年全国春季游泳锦标赛在青岛落幕，山东队小将张展硕在男子200米个人混合泳中夺冠，收获个人第三金，并刷新该项目个人最好成绩。",
-          "source": "新华社",
-          "url": "http://www.xinhuanet.com/",
-          "image_url": "https://images.unsplash.com/photo-1530549387789-4c1017266635?w=800&h=600&fit=crop",
-          "publish_time": "2025-03-22",
-          "hotness": 90
+          "title": "2026西湖半程马拉松开跑，沿途打卡西湖十景",
+          "summary": "2026西湖半程马拉松于3月22日在杭州黄龙体育中心鸣枪开跑，沿途经过断桥残雪、平湖秋月、雷峰夕照、苏堤春晓等西湖著名景点。",
+          "source": "杭州发布",
+          "url": "https://www.hangzhou.gov.cn/",
+          "image_url": "https://images.unsplash.com/photo-1537531383496-f4749b8032cf?w=800&h=600&fit=crop",
+          "publish_time": "2026-03-22",
+          "hotness": 94
         },
         {
           "id": "spo-002",
-          "title": "南京室内田径世锦赛开赛，中国队老将表现亮眼",
-          "summary": "2025年南京世界田联室内田径锦标赛于3月21日开幕，中国队老将朱亚明、谢震业和巩立姣在首日比赛中表现出色，展现了老将的实力。",
-          "source": "新华社",
-          "url": "http://www.xinhuanet.com/",
-          "image_url": "https://images.unsplash.com/photo-1461896836934- voices-of-children-who-are-our-future?w=800&h=600&fit=crop",
-          "publish_time": "2025-03-21",
-          "hotness": 86
+          "title": "2026自贡恐龙半程马拉松开跑，吴艳妮担任推荐官",
+          "summary": "2026自贡恐龙半程马拉松于3月22日在自贡市大安区青龙湖体育公园开跑，赛事邀请到自贡籍田径名将吴艳妮担任推荐官。",
+          "source": "四川在线",
+          "url": "https://sc.cri.cn/",
+          "image_url": "https://images.unsplash.com/photo-1551698618-1dfe5d97d34f?w=800&h=600&fit=crop",
+          "publish_time": "2026-03-22",
+          "hotness": 90
         },
         {
           "id": "spo-003",
-          "title": "苏翊鸣摘得2025世界单板滑雪锦标赛银牌",
-          "summary": "2025年世界单板滑雪锦标赛男子坡面障碍技巧决赛，首次参加世锦赛的中国选手苏翊鸣摘得银牌，创造了中国单板滑雪新历史。",
-          "source": "央视新闻",
-          "url": "https://sports.cctv.com/",
-          "image_url": "https://images.unsplash.com/photo-1551698618-1dfe5d97d34f?w=800&h=600&fit=crop",
-          "publish_time": "2025-03-21",
-          "hotness": 92
+          "title": "唐钱婷刷新亚洲纪录，女子50米蛙泳夺冠",
+          "summary": "在2026中国游泳公开赛女子50米蛙泳决赛中，唐钱婷以29秒44的成绩刷新亚洲纪录夺冠。",
+          "source": "新华社",
+          "url": "http://www.xinhuanet.com/",
+          "image_url": "https://images.unsplash.com/photo-1530549387789-4c1017266635?w=800&h=600&fit=crop",
+          "publish_time": "2026-03-19",
+          "hotness": 91
         },
         {
           "id": "spo-004",
-          "title": "CBA常规赛：辽宁男篮主场战胜广州男篮",
-          "summary": "辽宁男篮在CBA常规赛中主场以135比108战胜广州男篮，取得四连胜。主教练杨鸣表示球队在默契和积极性方面有所提升。",
-          "source": "腾讯体育",
-          "url": "https://sports.qq.com/",
-          "image_url": "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=800&h=600&fit=crop",
-          "publish_time": "2025-03-22",
-          "hotness": 80
+          "title": "U17国足2-0战胜塔吉克斯坦，邝兆镭、谢晋破门",
+          "summary": "中国U17国家队与来访的塔吉克斯坦U17进行热身赛，最终中国U-17队2-0获胜，邝兆镭和谢晋取得进球。",
+          "source": "虎扑体育",
+          "url": "https://www.hupu.com/",
+          "image_url": "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=800&h=600&fit=crop",
+          "publish_time": "2026-03-21",
+          "hotness": 87
         }
       ]
     },
@@ -102,43 +102,43 @@
       "articles": [
         {
           "id": "ent-001",
-          "title": "《哪吒2》密钥再延一个月，全球票房破152亿元",
-          "summary": "《哪吒2》密钥延期至4月30日，全球票房突破152亿元，位列全球影史第五。数据显示，白领群体贡献最多票房，达59.92%。",
-          "source": "新浪娱乐",
-          "url": "https://ent.sina.com.cn/",
-          "image_url": "https://images.unsplash.com/photo-1536440136628-849c177e76ff?w=800&h=600&fit=crop",
-          "publish_time": "2025-03-22",
-          "hotness": 98
+          "title": "我国生成式人工智能用户超6亿人",
+          "summary": "中国互联网络信息中心报告显示，截至2025年12月，我国生成式人工智能用户达6.02亿人，较2024年底增长141.7%，普及率达42.8%。",
+          "source": "央视网",
+          "url": "https://www.cctv.com/",
+          "image_url": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop",
+          "publish_time": "2026-03-20",
+          "hotness": 93
         },
         {
           "id": "ent-002",
-          "title": "电影《遥远的普若岗日》杀青，献礼西藏自治区成立60周年",
-          "summary": "电影《遥远的普若岗日》在拉萨杀青，作为西藏自治区成立60周年的献礼影片，首次深入藏北极高海拔无人区实景拍摄。",
-          "source": "新浪娱乐",
-          "url": "https://ent.sina.com.cn/",
-          "image_url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop",
-          "publish_time": "2025-03-22",
-          "hotness": 78
+          "title": "我国第二艘大型邮轮'爱达·花城号'正式亮相",
+          "summary": "我国第二艘大型邮轮'爱达·花城号'正式亮相，实现从设计到建造全链条自主可控，预计5月开启试航。",
+          "source": "中国船舶",
+          "url": "http://www.cssc.net.cn/",
+          "image_url": "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=800&h=600&fit=crop",
+          "publish_time": "2026-03-20",
+          "hotness": 86
         },
         {
           "id": "ent-003",
-          "title": "邓萃雯《浪姐6》初舞台演唱张国荣《共同渡过》",
-          "summary": "邓萃雯在《浪姐6》初舞台上演唱张国荣经典歌曲《共同渡过》，深情演绎让观众瞬间联想到经典角色姚小蝶。",
-          "source": "芒果TV",
-          "url": "https://www.mgtv.com/",
-          "image_url": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&h=600&fit=crop",
-          "publish_time": "2025-03-22",
-          "hotness": 82
+          "title": "春运40天超94亿人次出行，规模创历史新高",
+          "summary": "为期40天的春运落下帷幕，今年春运全社会跨区域人员流动量累计94.1亿人次，同比增长4.3%，出行规模创历史新高。",
+          "source": "交通运输部",
+          "url": "https://www.mot.gov.cn/",
+          "image_url": "https://images.unsplash.com/photo-1545987796-200677ee1011?w=800&h=600&fit=crop",
+          "publish_time": "2026-03-18",
+          "hotness": 84
         },
         {
           "id": "ent-004",
-          "title": "《倩女幽魂》《热烈》《速激7》集体归来，重映市场竞争激烈",
-          "summary": "多部经典影片宣布重映，包括《倩女幽魂》《热烈》《速度与激情7》等，重映市场迎来激烈竞争。",
-          "source": "新浪娱乐",
-          "url": "https://ent.sina.com.cn/",
-          "image_url": "https://images.unsplash.com/photo-1489599849927-2ee91cedd3d6?w=800&h=600&fit=crop",
-          "publish_time": "2025-03-22",
-          "hotness": 75
+          "title": "各地'春日文旅'持续升温，激活春日出游消费活力",
+          "summary": "内蒙古开行今年首趟前往江浙地区的旅游专列，多地结合春分、龙抬头等节日推出特色活动，激活春日出游消费活力。",
+          "source": "文旅部",
+          "url": "https://www.mct.gov.cn/",
+          "image_url": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&h=600&fit=crop",
+          "publish_time": "2026-03-21",
+          "hotness": 80
         }
       ]
     },
@@ -149,43 +149,43 @@
       "articles": [
         {
           "id": "sci-001",
-          "title": "神舟十九号航天员乘组圆满完成第三次出舱活动",
-          "summary": "3月21日，神舟十九号航天员乘组圆满完成第三次出舱活动。按计划，乘组将于1个多月后返回地球家园，标志着我国航天事业又迈出重要一步。",
-          "source": "中国载人航天",
-          "url": "http://www.cmse.gov.cn/",
-          "image_url": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=800&h=600&fit=crop",
-          "publish_time": "2025-03-21",
-          "hotness": 96
+          "title": "世界最强超高强度碳纤维量产，中复神鹰突破T1200级",
+          "summary": "中国建材集团所属中复神鹰自主研发的SYT80(T1200级)超高强度碳纤维发布，拉伸强度突破8000兆帕，成为全球首家能实现量产的企业。",
+          "source": "科技日报",
+          "url": "http://www.stdaily.com/",
+          "image_url": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800&h=600&fit=crop",
+          "publish_time": "2026-03-11",
+          "hotness": 95
         },
         {
           "id": "sci-002",
-          "title": "中国科学家确定月球南极-艾特肯盆地形成于42.5亿年前",
-          "summary": "中国科学家通过嫦娥六号采回的月球背面月壤样品研究，确定月球最古老、最大的撞击遗迹——南极-艾特肯盆地形成于42.5亿年前。",
-          "source": "中国科学院",
-          "url": "https://www.cas.cn/",
-          "image_url": "https://images.unsplash.com/photo-1446941611757-91d2c3bd3d45?w=800&h=600&fit=crop",
-          "publish_time": "2025-03-21",
-          "hotness": 94
+          "title": "蓝箭航天朱雀二号2E运载火箭顺利发射",
+          "summary": "蓝箭航天朱雀二号2E运载火箭顺利发射，星箭分离精准入轨，我国民营火箭可靠性进一步提升，助力商业航天产业高质量发展。",
+          "source": "新华社",
+          "url": "http://www.xinhuanet.com/",
+          "image_url": "https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?w=800&h=600&fit=crop",
+          "publish_time": "2026-03-20",
+          "hotness": 92
         },
         {
           "id": "sci-003",
-          "title": "子午工程二期通过国家验收，提升空间天气预报能力",
-          "summary": "国家重大科技基础设施——子午工程二期通过国家验收，将显著提升我国空间天气预报预警能力，与一期工程组成世界最大的空间环境地基综合监测网。",
-          "source": "科技部",
-          "url": "https://www.most.gov.cn/",
+          "title": "生态环境法典等三部重要法律通过",
+          "summary": "十四届全国人大四次会议表决通过生态环境法典、民族团结进步促进法、国家发展规划法。生态环境法典是世界上第一部以'生态环境法典'命名的法律。",
+          "source": "全国人大",
+          "url": "http://www.npc.gov.cn/",
           "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop",
-          "publish_time": "2025-03-21",
-          "hotness": 88
+          "publish_time": "2026-03-12",
+          "hotness": 89
         },
         {
           "id": "sci-004",
-          "title": "我国科学家取得深海小型机器人突破",
-          "summary": "我国科学家在深海小型机器人领域取得重要突破，为深海探测和资源开发提供了新的技术手段。",
-          "source": "科技日报",
-          "url": "http://www.stdaily.com/",
-          "image_url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
-          "publish_time": "2025-03-21",
-          "hotness": 82
+          "title": "'万吨大驱'增加到10艘，东莞舰、安庆舰亮相",
+          "summary": "央视《新闻联播》公开最新两艘055型导弹驱逐舰，舷号分别是东莞舰(109)和安庆舰(110)，公开亮相的'万吨大驱'增加到10艘。",
+          "source": "央视新闻",
+          "url": "https://www.cctv.com/",
+          "image_url": "https://images.unsplash.com/photo-1544552866-d3ed42536cfd?w=800&h=600&fit=crop",
+          "publish_time": "2026-03-08",
+          "hotness": 88
         }
       ]
     },
@@ -196,43 +196,43 @@
       "articles": [
         {
           "id": "tec-001",
-          "title": "以旧换新带动数码产品销售669.5亿元",
-          "summary": "据央视新闻联播报道，以旧换新政策带动数码产品销售达669.5亿元，春日旅游红火，新场景激发消费新活力。",
-          "source": "央视新闻",
-          "url": "https://www.cctv.com/",
-          "image_url": "https://images.unsplash.com/photo-1550009158-9ebf69173e03?w=800&h=600&fit=crop",
-          "publish_time": "2025-03-22",
-          "hotness": 89
+          "title": "工信部等三部门部署规范新能源汽车产业竞争秩序",
+          "summary": "工信部等三部门部署进一步规范新能源汽车产业竞争秩序，提出常态化、长效化深入整治行业网络乱象、统一充电接口标准等要求。",
+          "source": "工信部",
+          "url": "https://www.miit.gov.cn/",
+          "image_url": "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=800&h=600&fit=crop",
+          "publish_time": "2026-03-20",
+          "hotness": 90
         },
         {
           "id": "tec-002",
-          "title": "长三角区域外贸创新高，高新技术产品竞争力持续提升",
-          "summary": "长三角区域外贸创新高，高新技术产品竞争力持续提升，展现出中国制造的强劲实力。",
-          "source": "新华社",
-          "url": "https://www.xinhuanet.com/",
-          "image_url": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop",
-          "publish_time": "2025-03-22",
+          "title": "今年前两个月社会消费品零售总额达8.61万亿元",
+          "summary": "今年前两个月，社会消费品零售总额达8.61万亿元，同比增长2.8%，消费市场持续回暖。",
+          "source": "商务部",
+          "url": "http://www.mofcom.gov.cn/",
+          "image_url": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
+          "publish_time": "2026-03-20",
           "hotness": 85
         },
         {
           "id": "tec-003",
-          "title": "《商业银行代理销售业务管理办法》发布",
-          "summary": "《商业银行代理销售业务管理办法》正式发布，进一步规范商业银行代理销售业务，保护投资者合法权益。",
-          "source": "银保监会",
-          "url": "http://www.cbirc.gov.cn/",
-          "image_url": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=600&fit=crop",
-          "publish_time": "2025-03-21",
-          "hotness": 78
+          "title": "海关总署修订发布进口食品安全监管新规",
+          "summary": "海关总署修订发布新规，强化进口食品安全监管，相关政策措施将于6月1日起施行。",
+          "source": "海关总署",
+          "url": "http://www.customs.gov.cn/",
+          "image_url": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=600&fit=crop",
+          "publish_time": "2026-03-19",
+          "hotness": 82
         },
         {
           "id": "tec-004",
-          "title": "金砖国家特殊经济区中国合作中心在杭州揭牌",
-          "summary": "金砖国家特殊经济区中国合作中心在杭州揭牌成立，将进一步深化金砖国家间的经贸合作。",
-          "source": "新华社",
-          "url": "https://www.xinhuanet.com/",
-          "image_url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop",
-          "publish_time": "2025-03-21",
-          "hotness": 80
+          "title": "央行公布3月LPR报价，连续10个月保持不变",
+          "summary": "央行授权公布3月LPR报价，1年期LPR为3.0%、5年期以上LPR为3.5%，已连续10个月保持不变，维持市场利率稳定。",
+          "source": "央行",
+          "url": "http://www.pbc.gov.cn/",
+          "image_url": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=600&fit=crop",
+          "publish_time": "2026-03-20",
+          "hotness": 83
         }
       ]
     },
@@ -243,43 +243,43 @@
       "articles": [
         {
           "id": "pol-001",
-          "title": "特朗普宣布授予波音公司第六代战机项目合同，命名为F-47",
-          "summary": "当地时间3月21日，美国总统特朗普宣布授予波音公司生产美国空军'下一代空中优势'战斗机的合同，并将战机命名为F-47。",
-          "source": "央视新闻",
-          "url": "https://www.cctv.com/",
-          "image_url": "https://images.unsplash.com/photo-1559628233-100c798642d4?w=800&h=600&fit=crop",
-          "publish_time": "2025-03-21",
-          "hotness": 94
+          "title": "中国发展高层论坛2026年会在北京召开",
+          "summary": "中国发展高层论坛2026年年会于3月22日至23日在北京召开，主题为'十五五的中国：高质量发展与共创新机遇'，李强总理出席开幕式并发表主旨演讲。",
+          "source": "国务院发展研究中心",
+          "url": "https://www.cdf.org.cn/",
+          "image_url": "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=800&h=600&fit=crop",
+          "publish_time": "2026-03-22",
+          "hotness": 98
         },
         {
           "id": "pol-002",
-          "title": "王毅会见日本首相石破茂",
-          "summary": "3月21日，日本首相石破茂在东京会见到访的中共中央政治局委员、外交部长王毅。王毅表示，中日双方理应增进互信、加强合作。",
+          "title": "王毅应约同法国总统外事顾问博纳通电话",
+          "summary": "王毅应约同法国总统外事顾问博纳通电话，双方就中东局势交换意见，王毅阐述中方促和立场，呼吁各方立即停火止战。",
           "source": "外交部",
           "url": "https://www.mfa.gov.cn/",
-          "image_url": "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=800&h=600&fit=crop",
-          "publish_time": "2025-03-21",
+          "image_url": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&h=600&fit=crop",
+          "publish_time": "2026-03-21",
           "hotness": 91
         },
         {
           "id": "pol-003",
-          "title": "俄乌双方宣布24日将在沙特分别与美方代表团举行会谈",
-          "summary": "3月20日，俄乌双方宣布，24日俄罗斯、乌克兰代表团将在沙特分别与美方代表团举行会谈，讨论停火事宜。",
-          "source": "央视新闻",
-          "url": "https://www.cctv.com/",
-          "image_url": "https://images.unsplash.com/photo-1569163139599-0f4517e36f51?w=800&h=600&fit=crop",
-          "publish_time": "2025-03-20",
-          "hotness": 88
+          "title": "十四届全国人大四次会议在京闭幕",
+          "summary": "十四届全国人大四次会议在京闭幕，表决通过生态环境法典、民族团结进步促进法、国家发展规划法等重要法律。",
+          "source": "新华社",
+          "url": "http://www.xinhuanet.com/",
+          "image_url": "https://images.unsplash.com/photo-1572949791669-6626e0e8d482?w=800&h=600&fit=crop",
+          "publish_time": "2026-03-12",
+          "hotness": 89
         },
         {
           "id": "pol-004",
-          "title": "加拿大将在美国高速沿线竖广告牌反对特朗普关税",
-          "summary": "加拿大外交部长表示，加拿大将在美国高速公路沿线竖立一系列巨幅广告牌，针对美国公众开展反对特朗普关税的宣传。",
-          "source": "央视新闻",
-          "url": "https://www.cctv.com/",
-          "image_url": "https://images.unsplash.com/photo-1572949791669-6626e0e8d482?w=800&h=600&fit=crop",
-          "publish_time": "2025-03-21",
-          "hotness": 83
+          "title": "习近平：推动海洋经济高质量发展",
+          "summary": "《求是》杂志发表习近平总书记重要文章《推动海洋经济高质量发展》，强调要加快建设海洋强国。",
+          "source": "求是网",
+          "url": "http://www.qstheory.cn/",
+          "image_url": "https://images.unsplash.com/photo-1463947628408-f8581a2f4aca?w=800&h=600&fit=crop",
+          "publish_time": "2026-03-15",
+          "hotness": 87
         }
       ]
     },
@@ -290,43 +290,43 @@
       "articles": [
         {
           "id": "fin-001",
-          "title": "央行：根据国内外经济金融形势择机降准降息",
-          "summary": "央行表示将根据国内外经济金融形势和金融市场运作情况，择机降准降息，保持流动性合理充裕。",
-          "source": "央行官网",
-          "url": "http://www.pbc.gov.cn/",
+          "title": "今年经济增长目标4.5%—5%，政府工作报告全文播发",
+          "summary": "《政府工作报告》全文播发，今年发展主要预期目标是经济增长4.5%—5%，城镇新增就业1200万人以上，居民消费价格涨幅2%左右。",
+          "source": "新华社",
+          "url": "http://www.xinhuanet.com/",
           "image_url": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=600&fit=crop",
-          "publish_time": "2025-03-22",
-          "hotness": 92
+          "publish_time": "2026-03-13",
+          "hotness": 94
         },
         {
           "id": "fin-002",
-          "title": "吉利汽车2025年营收3452亿元，同比增长25%",
-          "summary": "吉利汽车发布2025年全年业绩报告，总收入为3452亿元，同比增长25%；归母净利润为168.5亿元人民币。",
-          "source": "财联社",
-          "url": "https://www.cls.cn/",
-          "image_url": "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&h=600&fit=crop",
-          "publish_time": "2025-03-18",
+          "title": "国务院批复同意将四川眉山列为国家历史文化名城",
+          "summary": "国务院近日批复同意将四川省眉山市列为国家历史文化名城，眉山成为我国第142座国家历史文化名城。",
+          "source": "中国政府网",
+          "url": "https://www.gov.cn/",
+          "image_url": "https://images.unsplash.com/photo-1548013146-72479768bada?w=800&h=600&fit=crop",
+          "publish_time": "2026-03-20",
           "hotness": 86
         },
         {
           "id": "fin-003",
-          "title": "多家银行下调消费贷款利率，最低降至2.5%",
-          "summary": "多家银行下调消费贷款利率，最低降至2.5%，进一步降低居民融资成本，刺激消费需求。",
-          "source": "财联社",
-          "url": "https://www.cls.cn/",
+          "title": "中菲合作遣返电信诈骗人员，涉案金额3.5亿元",
+          "summary": "中菲在国际刑警组织框架下合作，成功遣返涉案3.5亿元的电信诈骗蓝通人员，持续严打跨境电信诈骗。",
+          "source": "公安部",
+          "url": "https://www.mps.gov.cn/",
           "image_url": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop",
-          "publish_time": "2025-03-22",
-          "hotness": 84
+          "publish_time": "2026-03-20",
+          "hotness": 88
         },
         {
           "id": "fin-004",
-          "title": "商务部：对原产于日、美进口间苯二酚继续征收反倾销税",
-          "summary": "商务部发布公告，对原产于日本、美国的进口间苯二酚继续征收反倾销税，实施期限为5年。",
-          "source": "商务部",
-          "url": "http://www.mofcom.gov.cn/",
+          "title": "支持高质量发展的金融创新研讨会举行",
+          "summary": "中国发展高层论坛2026年会举行支持高质量发展的金融创新专题研讨会，探讨金融服务实体经济新路径。",
+          "source": "财新网",
+          "url": "https://www.caixin.com/",
           "image_url": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=600&fit=crop",
-          "publish_time": "2025-03-22",
-          "hotness": 79
+          "publish_time": "2026-03-22",
+          "hotness": 84
         }
       ]
     },
@@ -337,43 +337,43 @@
       "articles": [
         {
           "id": "aut-001",
-          "title": "2025年我国共实施汽车召回190次，涉及车辆684.6万辆",
-          "summary": "市场监管总局发布通告，2025年我国共实施汽车召回190次，涉及车辆684.6万辆，新能源汽车召回105次，涉及车辆265.2万辆。",
-          "source": "央视网",
-          "url": "https://news.cctv.com/",
-          "image_url": "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&h=600&fit=crop",
-          "publish_time": "2025-03-19",
-          "hotness": 87
+          "title": "新能源汽车产业竞争秩序整治，统一充电接口标准",
+          "summary": "工信部等三部门部署规范新能源汽车产业竞争秩序，提出整治行业网络乱象、统一充电接口标准等要求，扩大汽车消费。",
+          "source": "工信部",
+          "url": "https://www.miit.gov.cn/",
+          "image_url": "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=800&h=600&fit=crop",
+          "publish_time": "2026-03-20",
+          "hotness": 89
         },
         {
           "id": "aut-002",
-          "title": "乘联分会：3月1-15日全国乘用车市场零售56.1万辆",
-          "summary": "乘联分会数据显示，3月1-15日全国乘用车市场零售56.1万辆，同比下降21%，较上月同期增长2%。",
-          "source": "乘联会",
-          "url": "http://www.cpcaauto.com/",
-          "image_url": "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&h=600&fit=crop",
-          "publish_time": "2025-03-22",
-          "hotness": 81
+          "title": "CBA常规赛：上海男篮111-71大胜四川男篮",
+          "summary": "CBA常规赛第28轮，上海男篮111-71狂胜四川男篮40分，张镇麟、洛夫顿、王哲林、古德温四人得分上双。",
+          "source": "腾讯体育",
+          "url": "https://sports.qq.com/",
+          "image_url": "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=800&h=600&fit=crop",
+          "publish_time": "2026-03-21",
+          "hotness": 85
         },
         {
           "id": "aut-003",
-          "title": "过半经销商去年未完成销量目标，新车业务亏损加剧",
-          "summary": "中国汽车流通协会报告显示，2025年超过一半的经销商未能完成年度销量目标，汽车经销商亏损面增加至55.7%。",
-          "source": "澎湃新闻",
-          "url": "https://www.thepaper.cn/",
-          "image_url": "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&h=600&fit=crop",
-          "publish_time": "2025-03-18",
-          "hotness": 83
+          "title": "粤BA激情开幕，21座城市同场竞技",
+          "summary": "2026年广东省城市篮球联赛(粤BA)在广州天河体育中心体育馆激情开锣，21座城市代表队同场竞技。",
+          "source": "广东体育",
+          "url": "https://www.gdsports.cn/",
+          "image_url": "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=800&h=600&fit=crop",
+          "publish_time": "2026-03-21",
+          "hotness": 82
         },
         {
           "id": "aut-004",
-          "title": "中欧班列（武汉）'东风号'专列满载新能源汽车发往俄罗斯",
-          "summary": "中欧班列（武汉）'东风号'专列满载96台东风岚图新能源汽车，从中铁联集武汉中心站发车，驶往俄罗斯。",
+          "title": "温网将首次引入视频回放技术",
+          "summary": "2026年温布尔登网球锦标赛将首次引入视频回放技术，进一步提升判罚准确性与比赛公正性。",
           "source": "新华社",
-          "url": "https://www.xinhuanet.com/",
-          "image_url": "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=800&h=600&fit=crop",
-          "publish_time": "2025-03-21",
-          "hotness": 78
+          "url": "http://www.xinhuanet.com/",
+          "image_url": "https://images.unsplash.com/photo-1622163643998-24d8cc4c5725?w=800&h=600&fit=crop",
+          "publish_time": "2026-03-21",
+          "hotness": 80
         }
       ]
     },
@@ -384,43 +384,43 @@
       "articles": [
         {
           "id": "lif-001",
-          "title": "国际森林日：我国森林食物产量超2亿吨",
-          "summary": "3月21日是第13个'国际森林日'，记者从国家林草局了解到，2024年我国森林食物产量超2亿吨，成为继粮食、蔬菜之后的第三大重要农产品。",
-          "source": "国家林草局",
-          "url": "http://www.forestry.gov.cn/",
-          "image_url": "https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&h=600&fit=crop",
-          "publish_time": "2025-03-21",
-          "hotness": 85
+          "title": "3月22日世界水日，主题聚焦水与性别平等",
+          "summary": "3月22日是'世界水日'，2026年的主题聚焦水与性别平等，呼吁确保女性在水资源决策中拥有平等的话语权。",
+          "source": "联合国",
+          "url": "https://www.un.org/",
+          "image_url": "https://images.unsplash.com/photo-1548839140-87a6d6c4a7bc?w=800&h=600&fit=crop",
+          "publish_time": "2026-03-22",
+          "hotness": 86
         },
         {
           "id": "lif-002",
-          "title": "《中国食物与营养发展纲要(2025—2030年)》发布",
-          "summary": "《中国食物与营养发展纲要(2025—2030年)》明确，到2030年，我国多元化食物供给体系更加完善，食物优质化、特色化、品牌化水平持续提升。",
-          "source": "农业农村部",
-          "url": "http://www.moa.gov.cn/",
-          "image_url": "https://images.unsplash.com/photo-1490818387583-1baba5e638af?w=800&h=600&fit=crop",
-          "publish_time": "2025-03-20",
-          "hotness": 80
+          "title": "第三届博鳌乐城干细胞大会在海南举行",
+          "summary": "第三届博鳌乐城干细胞大会于3月20-22日举行，最新一批免疫细胞收费项目披露，大健康细胞领域评审标准正式发布。",
+          "source": "海南日报",
+          "url": "http://www.hndaily.com/",
+          "image_url": "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&h=600&fit=crop",
+          "publish_time": "2026-03-22",
+          "hotness": 84
         },
         {
           "id": "lif-003",
-          "title": "春日旅游红火，新场景激发消费新活力",
-          "summary": "各地春日旅游持续升温，新场景、新业态不断涌现，激发消费新活力，带动文旅市场复苏。",
-          "source": "央视新闻",
-          "url": "https://www.cctv.com/",
-          "image_url": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&h=600&fit=crop",
-          "publish_time": "2025-03-22",
-          "hotness": 82
+          "title": "2026武汉地铁多条线路提前开班，保障汉马出行",
+          "summary": "2026武汉马拉松赛事当天，武汉地铁1、7、8号线提前1小时至5:30开班，参赛选手可免费乘坐地铁。",
+          "source": "武汉地铁",
+          "url": "https://www.wuhanrt.com/",
+          "image_url": "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&h=600&fit=crop",
+          "publish_time": "2026-03-22",
+          "hotness": 88
         },
         {
           "id": "lif-004",
-          "title": "'千行万业系列招聘会'春季专场活动启动",
-          "summary": "'千行万业系列招聘会'春季专场活动启动，为求职者和用人单位搭建对接平台，促进就业。",
-          "source": "人社部",
-          "url": "http://www.mohrss.gov.cn/",
-          "image_url": "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&h=600&fit=crop",
-          "publish_time": "2025-03-21",
-          "hotness": 77
+          "title": "杭州地铁对西湖半马参赛者全线免费",
+          "summary": "2026西湖半程马拉松比赛当天，杭州地铁对参赛者全线免费，3号线、10号线首班车提前恭候。",
+          "source": "杭州地铁",
+          "url": "https://www.hzmetro.com/",
+          "image_url": "https://images.unsplash.com/photo-1474487548417-781cb71495f3?w=800&h=600&fit=crop",
+          "publish_time": "2026-03-22",
+          "hotness": 85
         }
       ]
     }
